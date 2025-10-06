@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Interactive Image Gallery</h1>
+            <p>Assignment 03</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="search-section">
+                    <input type="text" id="search-input" placeholder="Search images...">
+                    <button id="clear-search">Clear</button>
+                </div>
+                <div class="filter-section">
+                    <h3>Filter by Category:</h3>
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="mountains">Mountains</button>
+                    <button class="filter-btn" data-category="ocean">Ocean</button>
+                    <button class="filter-btn" data-category="forest">Forest</button>
+                    <button class="filter-btn" data-category="desert">Desert</button>
+                    <button class="filter-btn" data-category="waterfall">Waterfall</button>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <div class="gallery-title">
+                    <h2>Nature Gallery</h2>
+                </div>
+                <div class="main-image-container">
+                    <img id="main-image" src="images/forest.jpg" alt="A forest in autumn">
+                    <div class="image-actions">
+                        <button id="delete-btn" class="action-btn">Delete</button>
+                    </div>
+                    <div class="image-info">
+                        <p id="image-description">A forest in autumn</p>
+                    </div>
+                </div>
+                <div class="thumbnails-container" id="thumbnails-container">
+                    <img class="thumbnail forest" src="images/forest.jpg" alt="A forest in autumn">
+                    <img class="thumbnail ocean" src="images/waves.jpg" alt="Ocean at sunset">
+                    <img class="thumbnail mountains" src="images/mountain.jpg" alt="Snowy mountain peak">
+                    <img class="thumbnail waterfall" src="images/waterfall.jpg" alt="Blue waterfall in Iceland">
+                    <img class="thumbnail desert" src="images/desert.jpg" alt="Sand dunes in the desert">
+                </div>
+            </div>
+            <div class="gallery-controls">
+                <button class="nav-button" id="prev-btn">Previous</button>
+                <button class="nav-button" id="next-btn">Next</button>
+                <button class="nav-button" id="shuffle-btn">Shuffle</button>
+                <button class="nav-button" id="add-image-btn">Add Image</button>
+            </div>
+            <div class="stats">
+                <h3>Gallery Stats</h3>
+                <p>Total Images: <span id="total-count">0</span></p>
+                <p>Visible Images: <span id="visible-count">0</span></p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; SSDP 2000</p>
+            <p>Images sourced from Pexels</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
