@@ -93,7 +93,7 @@ function addEventOnThumbnails() {
       document.querySelectorAll(".thumbnail", ".active")
       .forEach((activeThumbnail) => activeThumbnail.classList.remove("active"));
 
-      currentIndex = index;
+      currentIndex = visibleMainData[index];
       thumbnail.classList.add("active");
       makeMainImg();
     });
